@@ -1,0 +1,30 @@
+.card-custom {
+      background-color: var(--gris-medio);
+      border: 2px solid var(--verde-acento);
+      border-radius: 15px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card-custom:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 255, 100, 0.4);
+    }
+
+    .card-custom img {
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      width: 100%;
+    }
+
+    .img-premios {
+      max-height: 400px; 
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .card-title,
+    .card-text {
+      color: var(--blanco);
+    }

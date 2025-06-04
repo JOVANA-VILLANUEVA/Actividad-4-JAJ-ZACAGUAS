@@ -1,124 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-:root {
-    --verde-acento: #8EA83D;
-    --gris-oscuro: #1e1e1e;
-    --gris-medio: #2c2c2c;
-    --blanco: #ffffff;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--gris-oscuro);
-    color: var(--blanco);
-    margin: 0;
-    padding: 0;
-}
-
-/* Encabezado principal */
-h1 {
-    background-color: var(--verde-acento);
-    color: var(--gris-oscuro);
-    padding: 20px;
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0;
-}
-
-/* Subtítulos */
-h2, h3 {
-    color: var(--verde-acento);
-    margin-top: 40px;
-    text-align: center;
-}
-
-/* Sección de contenido general */
-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Párrafos */
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Distribución en columnas */
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.flex .col {
-    flex: 1 1 45%;
-}
-
-/* Imágenes generales */
-img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
-    margin: 10px 0;
-}
-
-/* Formulario */
-form {
-    background-color: var(--gris-medio);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: 30px auto;
-}
-
-form p {
-    margin: 10px 0 5px;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--gris-oscuro);
-    color: var(--blanco);
-    border: 1px solid var(--verde-acento);
-    border-radius: 5px;
-}
-
-button {
-    background-color: var(--verde-acento);
-    color: var(--gris-oscuro);
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 30px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #70892c;
-}
-
-/* Mapa */
-iframe {
-    border: none;
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-}
-
-/* Footer */
-.img-footer {
-    display: block;
-    margin: 40px auto 0;
-    max-width: 100%;
-    border-top: 3px solid var(--verde-acento);
-}
+ :root {
+      --hueso-claro: #f8f6f2;
+      --hueso-medio: #f0ece3;
+      --hueso-oscuro: #e8e4db;
+      --verde-oscuro: #1a472a;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--hueso-claro) 0%, var(--hueso-medio) 50%, var(--hueso-claro) 100%);
+      background-size: 400% 400%;
+      animation: barrido 15s ease infinite;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    
+    /* Animación de barrido */
+    @keyframes barrido {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+    
+    /* Patrón sutil de textura */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(200, 200, 200, 0.05) 0.5px, transparent 1px),
+        radial-gradient(circle at 90% 80%, rgba(200, 200, 200, 0.05) 0.5px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: -1;
+    }
+    
+    /* Encabezado */
+    h1 {
+      font-weight: 600;
+      margin: 2rem 0;
+      color: var(--verde-oscuro);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: inline-block;
+      padding: 0 20px;
+    }
+    
+    h1::before,
+    h1::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 3px;
+      width: 30px;
+      background: var(--verde-oscuro);
+      border-radius: 2px;
+    }
+    
+    h1::before {
+      left: -40px;
+    }
+    
+    h1::after {
+      right: -40px;
+    }
+    
+    /* Tarjetas */
+    .card-custom {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .card-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--verde-oscuro);
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+    
+    /* Tarjeta especial de premios */
+    .card-premios {
+      background: linear-gradient(135deg, var(--verde-oscuro) 0%, #2c5e3e 100%);
+      color: white;
+    }
+    
+    .card-premios .text-success {
+      color: #a8e6cf !important;
+    }
+    
+    .img-premios {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Formulario */
+    .btn-success {
+      background: var(--verde-oscuro);
+      border: none;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-success:hover {
+      background: #2c5e3e;
+      transform: scale(1.05);
+    }
+    
+    .form-control {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      background: white;
+      border-color: var(--verde-oscuro);
+      box-shadow: 0 0 0 0.25rem rgba(26, 71, 42, 0.25);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--verde-oscuro);
+      color: white;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      position: relative;
+    }
+    
+    footer::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 Q50,10 100,0 L100,10 L0,10 Z" fill="%231a472a"/></svg>');
+      background-size: 100% 100%;
+    }
+    
+    /* Responsividad */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h1::before,
+      h1::after {
+        width: 15px;
+      }
+      
+      h1::before {
+        left: -25px;
+      }
+      
+      h1::after {
+        right: -25px;
+      }
+    }
+  <
