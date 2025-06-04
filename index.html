@@ -1,81 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZACAGUAS</title>
-    <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/imagenes.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZACAGUAS</title>
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/imagenes.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    .card-custom {
+      background-color: var(--gris-medio);
+      border: 2px solid var(--verde-acento);
+      border-radius: 15px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card-custom:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 255, 100, 0.4);
+    }
+
+    .card-custom img {
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      width: 100%;
+    }
+
+    .img-premios {
+      max-height: 400px; /* imagen premios más grande */
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .card-title,
+    .card-text {
+      color: var(--blanco);
+    }
+  </style>
 </head>
 <body>
-    <h1>BIENVENIDO A ZACAGUAS</h1>
-    <br>
-    
-    <p>¿QUIENES SOMOS?</p>
-    <img src="Img/quienesomos.jpg" alt="¿quienessomos?" class="img-quienes">
-    
-    <p>UNIVERSIDAD IMAGEN</p>
-    <br>
-    <img src="Img/Universidad.avif" alt="imagenplantel" class="img-plantel">
-    
-    <p>IMAGEN DEL PLANTEL</p>
-    <p>La Universidad de Zacaguas es una institución educativa reconocida por su enfoque en el desarrollo sostenible, la tecnología y la formación integral. Fundada en 1968, cuenta con modernas instalaciones rodeadas de naturaleza y ofrece programas en áreas como Ingeniería, Ciencias Sociales, Humanidades y Administración. Con una fuerte conexión con la comunidad y alianzas internacionales, la UZ forma líderes comprometidos con los retos del mundo actual.</p>
-    
-    <p>PREMIOS Y RECONOCIMIENTOS</p>
-    <img src="Img/premios.jpg" alt="imagenreconocimientos" class="img-premios">
-    <p>En nuestra universidad nos gusta ayudar a nuestros alumnos a cumplir sus metas y poner en práctica sus conocimientos.</p>
-    
-    <h3>"En Zacaguas no solo estudiamos el mundo, lo transformamos con cada idea, cada paso y cada sueño."</h3>
-    
-    <p>Dirección del plantel</p>
-    
-    <br>
-    <h2>NUESTRA RECTORA</h2>
-    <img src="Img/rectoras.jpeg" alt="rectorauniversidad" class="img-rectora">
-    
-    <p>Dra. Elena Xóchitl Navarro</p>
-    <p>La Dra. Elena Xóchitl Navarro es la actual rectora de la Universidad de Zacaguas, una institución reconocida por su compromiso con la innovación y el desarrollo sostenible. Con una destacada trayectoria académica, la Dra. Navarro ha liderado proyectos que integran la tecnología con las ciencias sociales, promoviendo una educación integral y adaptada a los desafíos del siglo XXI.
-    Bajo su liderazgo, la Universidad de Zacaguas ha fortalecido sus vínculos con comunidades locales e internacionales, fomentando programas de intercambio y colaboraciones que enriquecen la experiencia educativa de sus estudiantes. Su visión estratégica ha posicionado a la universidad como un referente en la formación de líderes comprometidos con la transformación social y el respeto por la diversidad cultural.</p>
-    
-    <br>
-    <h2>INFORMACIÓN DE BECAS</h2>
-    <p>En ZACAGUAS te ayudamos a continuar con tus estudios. Para ello, tenemos varias opciones de becas que te pueden ayudar a seguir adelante con tus metas.</p>
-    
-    <img src="Img/becas.jpg" alt="imagendebecas" class="img-becas">
-    
-    <p>BECAS DE EXCELENCIA</p>
-    <p>PASOS PARA SOLICITAR UNA BECA</p>
-    <ul>
-        <li>Revisa la convocatoria: Consulta tipos de becas y fechas en el portal de la UZ.</li>
-        <li>Verifica requisitos: Asegúrate de cumplir con el promedio y otros criterios.</li>
-        <li>Reúne documentos: Prepara tu boleta, CURP, comprobante de ingresos y carta de motivos.</li>
-        <li>Llena la solicitud en línea: Regístrate y carga tus documentos antes del cierre.</li>
-        <li>Espera resultados: Consulta si fuiste seleccionado en el portal o por correo.</li>
-        <li>Firma tu compromiso: Si eres beneficiado, acepta los términos y da seguimiento.</li>
-    </ul>
-    
-    <br>
-    <h3>CONTÁCTANOS</h3>
-    <p>Dirección: Avenida Universidad 1001, El Potrero, 20400 Rincón de Romos, Ags.</p>
-    
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.4089079613277!2d-102.28398656066801!3d22.224558979825478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868208c1ba388a0b%3A0x513aa559bea0f7f9!2sUniversidad%20Tecnológica%20del%20Norte%20de%20Aguascalientes!5e0!3m2!1ses!2smx!4v1748975647137!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
-    <br>
-    <p>Teléfono: 465-123-45-67</p>
-    <br>
-    <p>Clave Universitaria: MSUUE-YS565-5DIIE</p>
-    
-    <br>
-    <form action="">
-        <p>Correo:</p>
-        <input type="text">
-        <p>Mensaje:</p>
-        <input type="text">
-        <br><br>
-        <button>ENVIAR</button>
-        <br><br>
-    </form>
-    
-    <img src="Img/footer.jpg" alt="imagenfooter" class="img-footer">
+  <h1 class="text-center my-4">BIENVENIDO A ZACAGUAS</h1>
+
+  <div class="container py-5">
+    <div class="row g-4">
+
+      <!-- Primer card: Quiénes somos + imagen universidad -->
+      <div class="col-md-6">
+        <div class="card card-custom">
+          <img src="Img/quienesomos.jpg" class="card-img-top" alt="¿quienes somos?" />
+          <div class="card-body">
+            <h2 class="card-title text-center">¿QUIÉNES SOMOS?</h2>
+            <p class="card-text text-center">
+              La Universidad de Zacaguas es una institución educativa reconocida por su enfoque en el desarrollo sostenible, la tecnología y la formación integral...
+            </p>
+          </div>
+                 </div>
+      </div>
+
+      <!-- Card premios (separado, imagen más grande) -->
+      <div class="col-md-6">
+        <div class="card card-custom p-3">
+          <h2 class="card-title text-center mb-3">PREMIOS Y RECONOCIMIENTOS</h2>
+          <img src="Img/premios.png" alt="imagen reconocimientos" class="img-premios mb-3" />
+          <p class="card-text text-white">
+            En nuestra universidad nos gusta ayudar a nuestros alumnos a cumplir sus metas y poner en práctica sus conocimientos.
+          </p>
+          <blockquote class="blockquote text-center text-success mt-3">
+            <p>"En Zacaguas no solo estudiamos el mundo, lo transformamos con cada idea, cada paso y cada sueño."</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Resto de cards -->
+      <div class="col-md-6">
+        <div class="card card-custom">
+          <img src="Img/rectoras.jpeg" class="card-img-top" alt="rectora universidad" />
+          <div class="card-body">
+            <h2 class="card-title text-center">NUESTRA RECTORA</h2>
+            <p class="card-text">Dra. Elena Xóchitl Navarro</p>
+            <p class="card-text">
+              La Dra. Elena Xóchitl Navarro es la actual rectora de la Universidad de Zacaguas, una institución reconocida por su compromiso con la innovación...
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card card-custom">
+          <img src="Img/becas.jpg" class="card-img-top" alt="imagen de becas" />
+          <div class="card-body">
+            <h2 class="card-title text-center">INFORMACIÓN DE BECAS</h2>
+            <p class="card-text">
+              En ZACAGUAS te ayudamos a continuar con tus estudios. Para ello, tenemos varias opciones de becas que te pueden ayudar a seguir adelante con tus metas.
+            </p>
+            <h5 class="text-success">BECAS DE EXCELENCIA</h5>
+            <ul class="text-white">
+              <li>Revisa la convocatoria</li>
+              <li>Verifica requisitos</li>
+              <li>Reúce documentos</li>
+              <li>Llena la solicitud en línea</li>
+              <li>Espera resultados</li>
+              <li>Firma tu compromiso</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card card-custom">
+          <div class="card-body text-center">
+            <h2 class="card-title">CONTÁCTANOS</h2>
+            <p>Dirección: Avenida Universidad 1001, El Potrero, 20400 Rincón de Romos, Ags.</p>
+            <iframe
+              class="rounded"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.4089079613277!2d-102.28398656066801!3d22.224558979825478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868208c1ba388a0b%3A0x513aa559bea0f7f9!2sUniversidad%20Tecnol%C3%B3gica%20del%20Norte%20de%20Aguascalientes!5e0!3m2!1ses!2smx!4v1748975647137!5m2!1ses!2smx"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              style="width: 100%; height: 400px;"
+            ></iframe>
+            <p class="mt-3">Teléfono: 465-123-45-67</p>
+            <p>Clave Universitaria: MSUUE-YS565-5DIIE</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card card-custom">
+          <div class="card-body">
+            <h2 class="card-title text-center">ESCRÍBENOS</h2>
+            <form>
+              <div class="mb-3">
+                <label class="form-label text-white">Correo:</label>
+                <input
+                  type="text"
+                  class="form-control bg-dark text-white border-success"
+                  placeholder="Tu correo"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-white">Mensaje:</label>
+                <input
+                  type="text"
+                  class="form-control bg-dark text-white border-success"
+                  placeholder="Tu mensaje"
+                />
+              </div>
+              <button class="btn btn-success px-5">ENVIAR</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <img src="Img/footer.jpg" alt="imagen footer" class="" />
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

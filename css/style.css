@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --verde-acento: #8EA83D;
+    --gris-oscuro: #1e1e1e;
+    --gris-medio: #2c2c2c;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado principal */
+h1 {
+    background-color: var(--verde-acento);
+    color: var(--gris-oscuro);
+    padding: 20px;
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+/* Subtítulos */
+h2, h3 {
+    color: var(--verde-acento);
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Sección de contenido general */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Párrafos */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Distribución en columnas */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex .col {
+    flex: 1 1 45%;
+}
+
+/* Imágenes generales */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    margin: 10px 0;
+}
+
+/* Formulario */
+form {
+    background-color: var(--gris-medio);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+form p {
+    margin: 10px 0 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    border: 1px solid var(--verde-acento);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--verde-acento);
+    color: var(--gris-oscuro);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #70892c;
+}
+
+/* Mapa */
+iframe {
+    border: none;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+/* Footer */
+.img-footer {
+    display: block;
+    margin: 40px auto 0;
+    max-width: 100%;
+    border-top: 3px solid var(--verde-acento);
+}
